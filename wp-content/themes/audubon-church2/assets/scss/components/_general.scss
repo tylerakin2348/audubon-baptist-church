@@ -1,0 +1,318 @@
+/******************************************
+General Styles
+******************************************/
+body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.alignleft {
+    float: left;
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.aligncenter {
+    text-align: center;
+}
+
+li {
+  text-decoration: none;
+  margin: 0 auto;
+}
+
+ul {
+  margin: 0 auto;
+  margin-left: 2rem;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  li {
+      line-height: 1.75rem;
+      padding-left: .5rem;
+  }
+}
+
+
+ol {
+    margin: 0 auto;
+    margin-left: 2rem;
+    -webkit-padding-start: 0;
+    -webkit-margin-before: 0;
+    li {
+        line-height: 1.75rem;
+        list-style: decimal;
+        padding-left: .5rem;
+    }
+}
+
+a {
+    // padding: 1em 0;
+    color: $audubonRedLight;
+    text-align: center;
+    margin: 0 auto;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 700;
+    transition: .35s all ease-in-out;
+    position: relative;
+    overflow: visible;
+    text-align: center;
+    &:after {
+        background-color: $white;
+        content: '';
+        height: .25em;
+        width: 100%;
+        display: block;
+        position: absolute;
+        margin-top: .25em;
+        opacity: 1;
+        width: 100%;
+        transition: .35s all ease-in-out;
+
+    }
+    &:focus,
+    &:hover {
+        color: $audubonRed;
+        text-decoration: none;
+        transition: .35s all ease-in-out;
+        &:after {
+            opacity: 0;
+            margin-top: 1em;
+            transition: .35s all ease-in-out;
+        }
+
+    }
+}
+
+#top-header,
+.mejs-container {
+    a:after {
+        display: none;
+    }
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 2rem;
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+em {
+    color: $audubonRed;
+}
+
+p {
+    line-height: 1.75rem;
+    margin-top: 0rem;
+}
+
+.callout-text--red {
+    color: $audubonRedLight;
+}
+
+.red-text {
+    color: $audubonRed;
+}
+
+p + br {
+    // This style declaration removes injected br tag
+    display: none;
+}
+
+
+.contain,
+.contain-wide {
+    margin: 0 auto;
+}
+
+.contain {
+    max-width: $primaryWidth;
+}
+
+.contain-wide {
+    max-width: $largeWidth;
+}
+
+.layout {
+    overflow: hidden;
+    margin: 2rem auto;
+    padding: 0 1em;
+    p:last-child {
+        margin-bottom: 0;
+    }
+    &:last-child {
+        margin-bottom: 0rem;
+    }
+}
+
+.assistive {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+/******************************************
+Heading Styles
+******************************************/
+
+.blog-title a {
+  color: #333333;
+}
+
+.add-color {
+  background: rgba(255, 102, 102, 1);
+}
+.menu-main-menu-container {
+  margin: 0 auto;
+}
+
+
+.header-image {
+    max-height: calc(100vh - 90px);
+    height: auto;
+    width: 100%;
+
+
+    div.bg-image {
+        background-position: center center !important;
+        height: 90vh !important;
+        background-repeat: no-repeat !important;
+        background-size: cover !important;
+        width: 100% !important;
+    }
+
+}
+
+.background-overlay {
+    position: relative;
+    .inner-container .column {
+        position: relative;
+
+        &_primary-content {
+            img {
+                vertical-align: bottom;
+            }
+        }
+
+        &:nth-of-type(odd) {
+            h1,
+            h2,
+            h3,
+            h4 {
+                color: $white;
+                line-height: 1rem;
+                margin: 0;
+                position: absolute;
+                    left: 50%;
+                    top: 50%;
+                text-align: center;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                z-index: 1;
+            }
+            &:after {
+                background: $blackOverlay;
+                content: '';
+                display: block;
+                height: 101%;
+                width: 100%;
+                margin: 0 auto;
+                opacity: 0.5;
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-align: center;
+                transition: opacity .5s;
+            }
+        }
+        &:nth-of-type(even) {
+            h1,
+            h2,
+            h3,
+            h4 {
+                color: $white;
+                line-height: 1rem;
+                margin: 0;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%,-50%);
+                z-index: 1;
+            }
+            &:after {
+                background: $blackOverlay;
+                content: '';
+                display: block;
+                height: 101%;
+                width: 100%;
+                margin: 0 auto;
+                opacity: 0.5;
+                position: absolute;
+                left: 0;
+                top: 0;
+                text-align: center;
+                transition: opacity .5s;
+            }
+        }
+        &:hover {
+            &:after {
+                background: $audubonRed;
+                opacity: 1;
+                transition: opacity .5s;
+            }
+        }
+    }
+}
+
+.page-title {
+    color: $audubonRed;
+    font-weight: 700;
+    margin: 0 auto;
+    max-width: $primaryWidth;
+    padding: 2rem 0rem 0rem 1rem;
+}
+
+.site-content {
+
+    &__container {
+        margin: 0 auto;
+        max-width: $primaryWidth;
+    }
+}
+
+
+.logo-container {
+    font-size: 0;
+    text-align: center;
+    .logo {
+        display: inline-block;
+        font-size: 16px;
+        padding: 0rem 2rem;
+        text-align: center;
+        vertical-align: bottom;
+        width: 30%;
+        @include breakpoint(mobile) {
+            vertical-align: middle;
+            width: 25%;
+        }
+        @include breakpoint(mediumScreen) {
+            width: 18%;
+        }
+    }
+}

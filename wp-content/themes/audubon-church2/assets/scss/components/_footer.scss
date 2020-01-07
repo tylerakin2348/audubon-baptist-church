@@ -1,0 +1,32 @@
+/******************************************
+Footer Styles
+******************************************/
+.foot {
+    background: $audubonRedDark;
+    color: $white;
+    font-family: 'delius';
+    padding-top: 1em;
+    position: relative;
+    text-align: center;
+    div.foot-content {
+        padding: 1em;
+        a {
+            color: $white;
+            padding-right: 0;
+            text-align: center;
+            &.directory-link {
+                color: white;
+                padding: 2em;
+                position: absolute;
+                    right: 0;
+                    top: 0;
+            }
+        }
+
+    }
+
+}
+
+.design-labels {
+  text-align: center;
+}

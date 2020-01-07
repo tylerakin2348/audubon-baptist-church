@@ -1,0 +1,40 @@
+.our-story-partial {
+    margin-top: 0rem;
+    display: flex;
+    h1, h2, h3, h4, h5, h6, p, a {
+        color: $black;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .contain {
+        border: .1em solid gray;
+        border-top: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 0em;
+        width: 100%;
+        h2 {
+            text-align: center;
+            width: 50%;
+            margin-bottom: 0;
+        }
+    }
+    .site-logo__container {
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+      .site-logo--est,
+      .site-logo--reborn {
+          display: inline-block;
+          width: 100%;
+          color: $black;
+          font-family: 'Delius';
+          font-size: 1.25em;
+          padding: 1em 0;
+      }
+}

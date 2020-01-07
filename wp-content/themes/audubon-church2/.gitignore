@@ -1,0 +1,11 @@
+# Compiled source #
+###################
+*.jpg
+*.png
+*.scssc
+*.txt
+*.htaccess
+*.map
+*.wp-includes
+*.wp-admin
+*.sass-cache
