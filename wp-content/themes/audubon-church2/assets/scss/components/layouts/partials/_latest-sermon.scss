@@ -11,7 +11,7 @@
     }
     &:after {
         // background-image: linear-gradient(to bottom, white 50%, transparent);
-        background-color: rgba(117, 76, 24, .9);
+        background-color: rgba(145, 141, 141, .9);
         content: '';
         width: 100%;
         height: 100%;
@@ -57,12 +57,22 @@
         }
 
         .mejs-time-total {
+            background-color: rgba(145, 141, 141, .9) !important;
             height: 4em;
             top: 0;
             margin: 0;
         }
 
-        .mejs-time-loaded,
+        .mejs-time-loaded {
+            background-color: rgba(145, 141, 141, .9) !important;
+        }
+
+        .mejs-time-float {
+            .mejs-time-float-current {
+                color: $black;
+            }
+        }
+
         .mejs-time-current {
             height: 100%;
         }
@@ -88,7 +98,7 @@
         }
 
         .mejs-controls {
-            background-color: rgba(117, 76, 24, 1);
+            background-color: $audubonRedDark;
             height: auto;
             padding: 2em 1em;
             position: relative;

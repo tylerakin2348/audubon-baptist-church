@@ -65,7 +65,9 @@
                                   <span><?php echo $event['single_event_time']; ?></span>
                                </div>
                                <div class="layout-event__description contain">
-                                   <?php  echo $event['single_event_description']; ?>
+                                   <p>
+                                       <?php echo $event['single_event_description']; ?>
+                                   </p>
                                </div>
                                <div class="layout-event__link contain">
                                    <?php  echo $event['single_event_link']; ?>

@@ -22,7 +22,7 @@ nav.main-navigation {
             padding-left: 0rem;
             a {
                 color: $white;
-                font-family: 'Delius';
+                font-weight: 400;
                 margin: 0 auto;
                 padding: 0;
                 @include breakpoint(mediumScreen) {
@@ -43,7 +43,7 @@ nav.main-navigation {
 
         & > li {
             // Top Level menu items
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
 
         li.menu-item-has-children {
@@ -51,6 +51,9 @@ nav.main-navigation {
             align-items: center;
             position: relative;
             transition: all 1s ease;
+            > a {
+                padding-right: .25em;
+            }
             ul.sub-menu {
                 // This sets the sub-menu's styles. Note: on mobile, the sub menu is automatically visible
                 color: #333333;
@@ -80,7 +83,7 @@ nav.main-navigation {
                     float: none;
                     font-size: 1rem;
                     line-height: 2rem;
-                    padding: 0rem;
+                    padding: 0 .5rem;
                         text-align: center;
                         a {
                             margin: 0;
@@ -207,15 +210,15 @@ nav.main-navigation {
             display: inline-block;
             border-right: .1em solid $white;
             border-bottom: .1em solid $white;
-            width: .6em;
-            height: .6em;
+            width: .5em;
+            height: .5em;
             overflow: hidden;
             cursor: pointer;
             padding: 0;
             vertical-align: top;
             margin-left: .5em;
             margin-right: 1em;
-            margin-top: 1.25em;
+            margin-top: 1.5em;
             margin-right: 1em;
     }
 

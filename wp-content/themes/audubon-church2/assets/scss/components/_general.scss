@@ -2,8 +2,9 @@
 General Styles
 ******************************************/
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  line-height: 1.25em;
 }
 
 img {
@@ -57,7 +58,6 @@ ol {
 }
 
 a {
-    // padding: 1em 0;
     color: $audubonRedLight;
     text-align: center;
     margin: 0 auto;
@@ -153,6 +153,9 @@ p + br {
     overflow: hidden;
     margin: 2rem auto;
     padding: 0 1em;
+    p {
+        text-align: justify;
+    }
     p:last-child {
         margin-bottom: 0;
     }

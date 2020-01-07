@@ -79,7 +79,7 @@
 
 
         &:after {
-            background: #723F01;
+            background-color: rgba(145, 141, 141, .9);
             content: '';
             height: 90vh;
             width: 100%;
@@ -148,6 +148,23 @@
                 background-color: #723F01;
             }
 
+            .mejs-time-total {
+                background-color: rgba(145, 141, 141, .9) !important;
+                height: 4em;
+                top: 0;
+                margin: 0;
+            }
+
+            .mejs-time-loaded {
+                background-color: rgba(145, 141, 141, .9) !important;
+            }
+
+            .mejs-time-float {
+                .mejs-time-float-current {
+                    color: $black;
+                }
+            }
+
             .mejs-container {
                 // box-shadow: 0 0 1px 8px #9a886d;
                 height: auto !important;
@@ -165,7 +182,7 @@
             }
 
             .mejs-controls {
-                background-color: rgba(117, 76, 24, 1);
+                background-color: $audubonRedDark;
                 height: auto;
                 padding: 2em 1em;
                 position: relative;

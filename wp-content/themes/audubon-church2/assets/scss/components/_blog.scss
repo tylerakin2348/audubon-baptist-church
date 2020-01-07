@@ -11,6 +11,9 @@
         margin: 0 auto;
         max-width: $primaryWidth;
         padding: 1rem;
+        p {
+            text-align: justify;
+        }
         .post {
             display: flex;
                 align-items: flex-start;

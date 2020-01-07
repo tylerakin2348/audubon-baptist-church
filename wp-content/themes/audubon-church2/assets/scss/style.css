@@ -17,6 +17,9 @@
   margin: 0 auto;
   max-width: 44rem;
   padding: 1rem; }
+  .blog .page-wrapper p,
+  .single-post .page-wrapper p {
+    text-align: justify; }
   .blog .page-wrapper .post,
   .single-post .page-wrapper .post {
     display: flex;
@@ -58,7 +61,6 @@ Footer Styles
 .foot {
   background: #5e0101;
   color: #ffffff;
-  font-family: 'delius';
   padding-top: 1em;
   position: relative;
   text-align: center; }
@@ -82,8 +84,9 @@ Footer Styles
 General Styles
 ******************************************/
 body {
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden; }
+  font-family: 'Open Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.25em; }
 
 img {
   border-style: none;
@@ -199,6 +202,8 @@ p + br {
   overflow: hidden;
   margin: 2rem auto;
   padding: 0 1em; }
+  .layout p {
+    text-align: justify; }
   .layout p:last-child {
     margin-bottom: 0; }
   .layout:last-child {
@@ -347,7 +352,8 @@ Header Styles
     width: 100%; }
     #top-header .site-logo a {
       color: #ffffff;
-      font-family: 'Delius';
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 400;
       font-size: 1.25em; }
 
 .site-logo__container {
@@ -437,7 +443,7 @@ nav.main-navigation {
       padding-left: 0rem; }
       nav.main-navigation ul.menu li a {
         color: #ffffff;
-        font-family: 'Delius';
+        font-weight: 400;
         margin: 0 auto;
         padding: 0; }
         @media (min-width: 60em) {
@@ -449,11 +455,13 @@ nav.main-navigation {
         nav.main-navigation ul.menu li:last-of-type a {
           padding-right: 0rem; } }
     nav.main-navigation ul.menu > li {
-      font-size: 1.2em; }
+      font-size: 1.1em; }
     nav.main-navigation ul.menu li.menu-item-has-children {
       align-items: center;
       position: relative;
       transition: all 1s ease; }
+      nav.main-navigation ul.menu li.menu-item-has-children > a {
+        padding-right: .25em; }
       nav.main-navigation ul.menu li.menu-item-has-children ul.sub-menu {
         color: #333333;
         justify-content: center;
@@ -480,7 +488,7 @@ nav.main-navigation {
           float: none;
           font-size: 1rem;
           line-height: 2rem;
-          padding: 0rem;
+          padding: 0 .5rem;
           text-align: center; }
           nav.main-navigation ul.menu li.menu-item-has-children ul.sub-menu li a {
             margin: 0;
@@ -577,15 +585,15 @@ nav.main-navigation {
       display: inline-block;
       border-right: 0.1em solid #ffffff;
       border-bottom: 0.1em solid #ffffff;
-      width: .6em;
-      height: .6em;
+      width: .5em;
+      height: .5em;
       overflow: hidden;
       cursor: pointer;
       padding: 0;
       vertical-align: top;
       margin-left: .5em;
       margin-right: 1em;
-      margin-top: 1.25em;
+      margin-top: 1.5em;
       margin-right: 1em; } }
 
 .hamburger-icon {
@@ -713,7 +721,6 @@ nav.main-navigation {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Delius';
       margin-bottom: .5em;
       min-height: 12rem;
       overflow: hidden;
@@ -928,13 +935,12 @@ nav.main-navigation {
 
 .layout-events .layout-event {
   border-bottom: .1em solid gray;
-  padding: 2em 1rem; }
+  padding: 2em 1rem;
+  text-align: justify; }
   .layout-events .layout-event__date > span {
     font-size: 1em; }
   .layout-events .layout-event__title h3 {
     margin-bottom: 0; }
-  .layout-events .layout-event__time {
-    font-weight: 700; }
   .layout-events .layout-event__description {
     margin-top: 1rem; }
   .layout-events .layout-event__link {
@@ -953,7 +959,7 @@ nav.main-navigation {
     text-align: center;
     font-weight: 400; }
   .latest-sermon:after {
-    background-color: rgba(117, 76, 24, 0.9);
+    background-color: rgba(145, 141, 141, 0.9);
     content: '';
     width: 100%;
     height: 100%;
@@ -986,10 +992,14 @@ nav.main-navigation {
     .latest-sermon .contain__title {
       margin-bottom: 1rem; }
     .latest-sermon .contain .mejs-time-total {
+      background-color: rgba(145, 141, 141, 0.9) !important;
       height: 4em;
       top: 0;
       margin: 0; }
-    .latest-sermon .contain .mejs-time-loaded,
+    .latest-sermon .contain .mejs-time-loaded {
+      background-color: rgba(145, 141, 141, 0.9) !important; }
+    .latest-sermon .contain .mejs-time-float .mejs-time-float-current {
+      color: #000000; }
     .latest-sermon .contain .mejs-time-current {
       height: 100%; }
     .latest-sermon .contain .mejs-time-handle {
@@ -1006,7 +1016,7 @@ nav.main-navigation {
         display: block;
         width: 100%; }
     .latest-sermon .contain .mejs-controls {
-      background-color: #754c18;
+      background-color: #5e0101;
       height: auto;
       padding: 2em 1em;
       position: relative;
@@ -1255,7 +1265,7 @@ nav.main-navigation {
     padding: 1em 0; }
 
 .weekly-schedule {
-  background-color: rgba(114, 1, 1, 0.78);
+  background-color: rgba(145, 141, 141, 0.9);
   padding: 2em; }
   .weekly-schedule__container {
     display: flex;
@@ -1349,7 +1359,6 @@ nav.main-navigation {
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
-  font-family: 'Delius';
   height: 100%;
   margin: 0 auto;
   max-width: 60rem;
@@ -1376,11 +1385,7 @@ nav.main-navigation {
   width: auto;
   margin-bottom: 0; }
 
-.page-template-front-page .latest-sermon--block {
-  font-family: 'delius'; }
-
 .page-template-front-page .latest-post--block {
-  font-family: 'delius';
   position: relative; }
   .page-template-front-page .latest-post--block .latest-post {
     position: absolute;
@@ -1455,7 +1460,7 @@ nav.main-navigation {
       position: relative;
       display: inline-block; }
     .sermons .sermon:after {
-      background: #723F01;
+      background-color: rgba(145, 141, 141, 0.9);
       content: '';
       height: 90vh;
       width: 100%;
@@ -1503,6 +1508,15 @@ nav.main-navigation {
         height: 100%; }
       .sermons .sermon .contain .mejs-time-handle {
         background-color: #723F01; }
+      .sermons .sermon .contain .mejs-time-total {
+        background-color: rgba(145, 141, 141, 0.9) !important;
+        height: 4em;
+        top: 0;
+        margin: 0; }
+      .sermons .sermon .contain .mejs-time-loaded {
+        background-color: rgba(145, 141, 141, 0.9) !important; }
+      .sermons .sermon .contain .mejs-time-float .mejs-time-float-current {
+        color: #000000; }
       .sermons .sermon .contain .mejs-container {
         height: auto !important;
         width: 100%;
@@ -1515,7 +1529,7 @@ nav.main-navigation {
           display: block;
           width: 100%; }
       .sermons .sermon .contain .mejs-controls {
-        background-color: #754c18;
+        background-color: #5e0101;
         height: auto;
         padding: 2em 1em;
         position: relative;
