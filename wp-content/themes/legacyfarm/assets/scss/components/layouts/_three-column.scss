@@ -1,0 +1,68 @@
+.three-column-layout {
+    overflow: hidden;
+    position: relative;
+    .inner-container {
+        display: flex;
+            flex-direction: column;
+            @include breakpoint(mobile) {
+                flex-direction: row;
+            }
+        .column {
+            background-size: cover;
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            margin-bottom: .5em;
+            min-height: 12rem;
+            overflow: hidden;
+            padding: 10% 0em;
+            @include breakpoint(mobile) {
+                margin-bottom: 0em;
+                margin-right: .5em;
+                min-height: 25vw;
+                padding: 5% 0em;
+                width: 33.33%;
+            }
+            @include breakpoint(desktop) {
+                min-height: 12rem;
+            }
+            p:last-of-type {
+                margin-bottom: 0em;
+                margin-right: 0em;
+            }
+            &_primary-content {
+                h1, h2, h3, h4, h5, h6 {
+                    opacity: 1;
+                    transition: opacity .5s ease-out;
+                }
+            }
+
+            &_secondary-content {
+                color: $white;
+                text-align: center;
+                padding: 5%;
+                position: relative;
+                transform: translateY(15em);
+                transition: transform .5s ease-out;
+                z-index: 1;
+            }
+            &:hover,
+            .hover {
+                .column_primary-content {
+                    h1, h2, h3, h4, h5, h6 {
+                        opacity: 0;
+                        transition: opacity .5s ease-out;
+                    }
+                }
+                .column_secondary-content {
+                    transition: transform .5s ease-out;
+                    transform: translateY(0em);
+                }
+            }
+            &:last-of-type {
+                margin-bottom: 0rem;
+                margin-right: 0rem;
+            }
+        }
+    }
+}

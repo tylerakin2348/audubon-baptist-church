@@ -1,0 +1,40 @@
+.page-template-front-page {
+
+    .page-title {
+        display: inline-block;
+        padding: 1em 1em;
+        color: $audubonRed;
+        display: inline-block;
+        font-weight: 700;
+        padding: 2rem 0rem;
+        width: 100%;
+        width: auto;
+        margin-bottom: 0;
+    }
+
+    .latest-post--block {
+        position: relative;
+        .latest-post {
+            position: absolute;
+                left: 50%;
+                top: 65%;
+                transform: translate(-50%,-50%);
+            z-index: 1;
+            a {
+                color: $white;
+            }
+        }
+    }
+}
+
+.media-object {
+    img {
+        width: 100%;
+        @include breakpoint(mobile) {
+            width: auto;
+        }
+    }
+    &__content {
+        overflow: hidden;
+    }
+}

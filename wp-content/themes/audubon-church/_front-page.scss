@@ -1,0 +1,69 @@
+.page-template-front-page {
+
+    .header-content {
+        background-position: center center;
+        background-size: cover;
+            height: 90vh;
+
+        &:before {
+            content: url('/wp-content/themes/audubon-church/assets/icons/audubon-logo3.svg');
+            height: auto;
+            max-width: 40em;
+            position: absolute;
+                left: 50%;
+                top: 40%;
+            transform: translate(-50%,-50%);
+            width: 90vw;
+            z-index: 1;
+            @include breakpoint(mobile) {
+                width: 68vw;
+            }
+        }
+        &:after {
+            background: $blackOverlay;
+            content:'';
+            height: 90vh;
+            width: 100%;
+            opacity: .4;
+            position: absolute;
+                left: 0%;
+                top: 0%;
+        }
+    }
+
+}
+
+.bg-image + a span,
+.bg-image + p a span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+  z-index: 1;
+  // background-image: url('empty.gif');
+}
+
+.church-info {
+    color: $white;
+    display: flex;
+        align-items: flex-end;
+        justify-content: space-around;
+        font-family: 'Delius';
+    height: 100%;
+    margin: 0 auto;
+    max-width: 60rem;
+    z-index: 1;
+    &__time {
+        margin-bottom: 5em;
+        max-width: 15em;
+        text-align: center;
+        z-index: 1;
+    }
+    &__location {
+        margin-bottom: 5em;
+        max-width: 15em;
+        text-align: center;
+        z-index: 1;
+    }
+}

@@ -1,0 +1,24 @@
+.layout-media-object {
+
+    &__image {
+        width: 50%;
+        img {
+            vertical-align: bottom;
+        }
+    }
+
+    &__content {
+        border-left: .35em solid black;
+        padding-left: 1em;
+        padding-top: 1em;
+        border-top: .35em solid black;
+        border-bottom: .35em solid black;
+        width: 50%;
+    }
+
+    .media-object__container {
+        display: flex;
+            justify-content: space-between;
+    }
+
+}

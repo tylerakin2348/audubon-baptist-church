@@ -1,0 +1,92 @@
+.six-column--layout {
+    max-width: $primaryWidth;
+    margin: 0 auto;
+    margin-bottom: 4em;
+    overflow: hidden;
+    padding: 0rem 1rem;
+    position: relative;
+
+    .inner-container {
+        display: flex;
+            flex-direction: column;
+            @include breakpoint(mobile) {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+        .column {
+            background-size: cover;
+            display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            height: 23vw;
+            margin-bottom: .5em;
+            overflow: hidden;
+            padding: 2%;
+            @include breakpoint(mobile) {
+                height: 12vw;
+                    max-height: 10em;
+                margin-bottom: 0em;
+                margin-right: .5em;
+                margin: 0% 0%;
+                width: 29.33%;
+            }
+            p:last-of-type {
+                margin-bottom: 0em;
+                margin-right: 0em;
+            }
+            &_primary-content {
+                text-align: center;
+                h1, h2, h3, h4, h5, h6 {
+                    opacity: 1;
+                    transition: opacity .5s ease-out;
+                    width: 100%;
+                }
+                h3 i {
+                    font-size: .9em;
+                }
+            }
+
+            &_secondary-content {
+                color: $white;
+                text-align: center;
+                padding: 5%;
+                position: absolute;
+                transform: translateY(20em);
+                transition: transform .5s ease-out;
+                z-index: 1;
+            }
+            &:hover {
+                &:after {
+                    opacity: 0;
+                }
+            }
+        }
+    }
+    &.background-overlay .inner-container .column {
+        &:after {
+            background: tan;
+            opacity: .3;
+        }
+        &:hover {
+            &:after {
+                opacity: 0;
+
+            }
+        }
+        &:nth-of-type(even) h3 {
+            line-height: 1.25rem;
+
+        }
+    }
+
+    .external-link {
+        position: absolute;
+            left: 0;
+            top: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+}
