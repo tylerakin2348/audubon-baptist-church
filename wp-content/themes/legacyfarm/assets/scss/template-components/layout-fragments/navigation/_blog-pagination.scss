@@ -1,0 +1,26 @@
+.pagination {
+    margin: 0 auto;
+    padding: 2em 1em;
+    text-align: center;
+
+    .page-numbers {
+        padding: .5em .8em;
+        border: .1em solid $audubonRed;
+        border-radius: .35em;
+
+        &:after {
+            display: none;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: lighten($audubonRed, 4%);
+            color: $white;
+        }
+
+        &.current {
+            background-color: $audubonRed;
+            color: $white;
+        }
+    }
+}

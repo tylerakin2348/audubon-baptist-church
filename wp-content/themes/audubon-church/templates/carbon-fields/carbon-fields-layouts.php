@@ -137,6 +137,15 @@
            </div>
        <?php  }
 
+
+       // Homepage Slider Partial
+       if ($section['partial_reveal'] === true && $section['partials']=== "homepage-slider-partial") { ?>
+            <div>
+                test
+            </div>
+    <?php  }
+
+
        // Weekly Schedule Partial
        if ($section['partial_reveal'] === true && $section['partials']=== "weekly-schedule-partial") { ?>
            <div class="weekly-schedule">

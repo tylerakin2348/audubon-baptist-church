@@ -1,5 +1,6 @@
 # Compiled source #
 ###################
+*node_modules*
 *.jpg
 *.png
 *.scssc
@@ -9,3 +10,4 @@
 *.wp-includes
 *.wp-admin
 *.sass-cache
+package-lock.json

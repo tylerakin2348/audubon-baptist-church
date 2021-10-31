@@ -1,0 +1,59 @@
+.gp-animal-list {
+    margin: 4rem auto;
+
+    &__container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: $primaryWidth;
+        flex-wrap: wrap;
+    }
+
+    &__heading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+        max-width: $primaryWidth;
+    }
+
+    .single-animal {
+        border-radius: 1.1em;
+        box-shadow: 0 0 13px 1px #80808063;
+        margin: .5em;
+        width: 100%;
+
+        @include breakpoint(mobile) {
+            width: 30.33%;
+        }
+    }
+
+    .image {
+        height: 14em;
+        max-height: none;
+        max-height: none;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        z-index: 0;
+        border-top-left-radius: 1.1em;
+        border-top-right-radius: 1.1em;
+
+        img {
+            height: 100%;
+            max-width: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+    }
+
+
+    .text {
+        padding: 1em;
+    }
+}

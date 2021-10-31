@@ -1,0 +1,101 @@
+.layout-slider {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    height: 80vh;
+    margin-top: 0; // Override default margin top
+    padding: 0;
+    position: relative;
+    width: 100%;
+
+    .carousel {
+        z-index: 1;
+    }
+
+    .flickity-slider {
+        height: 100%;
+        width: 100%;
+    }
+
+    .button-row {
+        display: flex;
+        position: absolute;
+        bottom: 1rem;
+        left: auto;
+        right: 1em;
+        width: auto;
+        z-index: 1;
+
+        .button-slide-selector {
+            background-color: transparent;
+            display: inline-block;
+            margin: 1em .25em;
+            padding: 0.5em;
+
+            &.is-selected {
+                background-color: $white;
+            }
+        }
+
+        .button--previous,
+        .button--next {
+            background-color: $white;
+        }
+    }
+
+    &__slide {
+        height: 100%;
+        max-width: none;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+
+        img {
+            height: 100%;
+            max-height: none;
+            object-fit: cover;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        &:after {
+            background: rgba(0, 0, 0, 0.6);
+            content: "";
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 0;
+        }
+    }
+
+    &__content {
+        color: $white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        padding: 0 1em;
+        position: relative;
+        z-index: 1;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            color: $white;
+        }
+
+        &__slide--image {
+            height: 100%;
+            position: absolute;
+            width: 100%;
+        }
+    }
+}

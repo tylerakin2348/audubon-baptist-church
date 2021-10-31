@@ -1,0 +1,244 @@
+/******************************************
+Navigation Styles
+******************************************/
+
+.main-navigation {
+    display: none;
+    position: relative;
+    z-index: 1;
+    @include breakpoint(mediumScreen) {
+        display: inline-block;
+    }
+    @include breakpoint(mediumScreen) {
+        display: inline-block;
+        padding-right: 1.5rem;
+    }
+
+    ul {
+        margin-left: 0rem;
+        li {
+            float: left;
+            list-style: none;
+            padding-left: 0rem;
+            a {
+                color: $white;
+                font-weight: 400;
+                margin: 0 auto;
+                padding: 0;
+                @include breakpoint(mediumScreen) {
+                    padding: 1em;
+                }
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+            &:last-of-type {
+                a {
+                    @include breakpoint(mediumScreen) {
+                        padding-right: 0rem;
+                    }
+                }
+            }
+        }
+
+        & > li {
+            // Top Level menu items
+            font-size: 1.1em;
+        }
+
+        .menu-item-has-children {
+            // Menu item that has children
+            align-items: center;
+            position: relative;
+            transition: all 1s ease;
+            > a {
+                padding-right: .25em;
+            }
+            ul.sub-menu {
+                // This sets the sub-menu's styles. Note: on mobile, the sub menu is automatically visible
+                color: #333333;
+                justify-content: center;
+                font-size: 1rem;
+                flex-direction: row;
+                list-style: none;
+                margin-left: 0rem;
+                min-height: 1em;
+                line-height: 1em;
+                transition: all .5s ease;
+                z-index: 99;
+                overflow: hidden;
+                @include breakpoint(mediumScreen) {
+                    // This hides the sub-menu to enable the hide/show reveal on hover
+                    margin: 0em .75em;
+                    display: none;
+                    margin-top: 1rem;
+                    padding: 0;
+                    position: absolute;
+                        left: 0;
+                        top: 4em;
+                        margin: 0;
+                }
+
+                li {
+                    float: none;
+                    font-size: 1rem;
+                    line-height: 2rem;
+                    padding: 0 .5rem;
+                        text-align: center;
+                        a {
+                            margin: 0;
+                            display: inline-block;
+                            vertical-align: bottom;
+                            width: 100%;
+                            margin: 0 auto;
+                            display: block;
+                            @include breakpoint(mediumScreen) {
+                                padding: 1em 0;
+                            }
+                        }
+                }
+                &.open-submenu {
+                    transition: all .5s ease;
+                    justify-content: center;
+                    max-height: 25em;
+                    @include breakpoint(mediumScreen) {
+                        background: $audubonRedLight;
+                        display: inline-block;
+                        min-width: 10em;
+                    }
+
+                }
+                &:hover {
+                        transition: all .5s ease;
+                        justify-content: center;
+
+                        @include breakpoint(mediumScreen) {
+                            display: inline-block;
+                            min-width: 10em;
+                        }
+
+                        a {
+                            margin: 0;
+                            display: inline-block;
+                            vertical-align: bottom;
+                            width: 100%;
+                            margin: 0 auto;
+                            display: block;
+                            @include breakpoint(mediumScreen) {
+                                background: $audubonRedLight;
+                                padding: 1em 0;
+                            }
+                        }
+                }
+            }
+
+                a {
+                    color: $white;
+
+                    &:hover {
+
+                    & ~ .sub-menu {
+                            transition: all .5s ease;
+                            justify-content: center;
+                            margin: 0;
+                            @include breakpoint(mediumScreen) {
+                                display: inline-block;
+                                min-width: 10em;
+                            }
+
+                            a {
+
+                                margin: 0;
+                                display: inline-block;
+                                vertical-align: bottom;
+                                width: 100%;
+                                margin: 0 auto;
+                                display: block;
+                                @include breakpoint(mediumScreen) {
+                                    background: $audubonRedLight;
+                                    padding: 1em 0;
+                                }
+                            }
+                        }
+                    }
+                }
+
+
+        }
+    }
+
+    &.open {
+        // Open class that applies to the mobile menu
+        // Note: this class is attached to nav.main-navigation
+        background: $audubonRed;
+        display: flex;
+            align-items: center;
+            justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        opacity: 1;
+        position: fixed;
+            left: 0;
+            top: 0;
+        text-align: center;
+        z-index: 2;
+        ul.menu {
+            display: flex;
+                flex-direction: column;
+                @include breakpoint(mediumScreen) {
+                    flex-direction: row;
+                }
+            & > li {
+                // Top Level menu items
+                float: none;
+                list-style: none;
+                text-align: center;
+                padding: .8em 0;
+            }
+        }
+    }
+}
+
+.toggle-submenu {
+    display: none;
+    position: relative;
+
+    @include breakpoint(mediumScreen) {
+        background: 0 0;
+        cursor: pointer;
+        border: 0;
+        display: inline-block;
+        height: 1.75em;
+        margin-left: .5em;
+        margin-right: .75em;
+        padding: 0;
+        overflow: hidden;
+        transform: rotate(0deg);
+        width: 1.75em;
+        vertical-align: middle;
+        transition: transform .35s ease-in-out;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            top: 62%;
+            transform: translate(-50%, -50%) scale(1.5);
+            width: 100%;
+            background-image: url("../../assets/icons/arrow.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+        }
+
+    }
+
+    &.submenu-active {
+        @include breakpoint(mediumScreen) {
+            transform: rotate(180deg);
+            transition: transform .35s ease-in-out;
+        }
+    }
+}

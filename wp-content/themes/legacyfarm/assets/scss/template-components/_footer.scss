@@ -1,0 +1,59 @@
+/******************************************
+Footer Styles
+******************************************/
+.foot {
+    background: $audubonRedDark;
+    color: $white;
+    padding-top: 1em;
+    position: relative;
+    text-align: center;
+    div.foot-content {
+        padding: 1em;
+        a {
+            color: $white;
+            padding-right: 0;
+            text-align: center;
+            
+            &.directory-link {
+                color: white;
+                padding: 2em;
+                position: absolute;
+                    right: 0;
+                    top: 0;
+            }
+        }
+
+    }
+
+}
+
+
+.to-top {
+    position: absolute;
+    top: 0;
+    border: .25em solid white;
+    border-radius: 100%;
+    color: white;
+    background: #860101;
+    right: 1em;
+    padding: 1.5rem 3rem;
+    top: -2em;
+    &:after {
+        content: '';
+        display: inline-block;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%) scale(.75) rotate(180deg);
+        width: 100%;
+        background-image: url(../../assets/icons/arrow.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform .35s cubic-bezier(.6,-.28,.735,.045);
+    }
+}
+
+.design-labels {
+  text-align: center;
+}

@@ -1,0 +1,180 @@
+.layout-for-sale {
+    margin: 4rem auto;
+
+    @include breakpoint(mediumScreen) {
+        height: 35rem; // play with a fixed height
+        padding-bottom: 4em;
+    }
+
+    &__container {
+        border-radius: .25em;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        max-width: $largeWidth;
+
+        @include breakpoint(mediumScreen) {
+            flex-direction: row;
+        }
+    }
+
+    &__left {
+        border: .2em solid transparent;
+        border-radius: 1.1em;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+
+        @include breakpoint(mediumScreen) {
+            width: 70%;
+        }
+
+        &-image {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            width: 100%;
+            z-index: 0;
+
+            img {
+                height: 100%;
+                max-width: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+            }
+
+            &:before {
+                background: rgba(0, 0, 0, .6);
+                content: "";
+                display: inline-block;
+                height: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+
+        &-content {
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            padding: 2em 1em;
+            position: relative;
+        }
+    }
+
+    .flickity-viewport {
+        height: 100%;
+        width: 100%;
+        width: 35rem; // play with a fixed height
+
+    }
+
+    .flickity-slider {
+        height: 100%;
+        width: 100%;
+        width: 35rem; // play with a fixed height
+
+    }
+
+    .carousel {
+    display: block;
+    height: 118%;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(90deg) translate(0,-85%);
+    // width: 154%;
+        width: 35rem; // play with a fixed height
+
+    transform-origin: 0 0;
+    margin: 0;
+    }
+
+    .carousel-cell {
+        background-color: $white;
+      box-shadow: 0 0 13px 1px #80808063;
+    display: block;
+    height: 67%;
+    margin-left: 1em;
+    margin-right: 1em;
+    position: relative;
+    overflow: hidden;
+    transform: rotate(-90deg) translate(-4.5em,.5em);
+    width: 58%;
+    border-top-left-radius: 1.1em;
+    border-top-right-radius: 1.1em;
+    border-bottom-left-radius: .25em;
+    border-bottom-right-radius: .25em;
+
+        &.hide-slide-when-offscreen {
+            visibility: hidden;
+        }
+
+        .image {
+            height: 70%;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+
+            img {
+                height: auto;
+                max-height: none;
+                max-width: none;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                object-fit: cover;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+
+        .text {
+            padding: .5em;
+        }
+
+
+    }
+
+    &__right {
+        display: none;
+
+        @include breakpoint(mediumScreen) {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: visible;
+            width: 30%;
+        }
+
+    }
+
+
+    .button-row {
+        background: linear-gradient(to top, #fff 35%, transparent);
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        margin: 0;
+        position: relative;
+        bottom: -.5em;
+        left: 0;
+        right: auto;
+        text-align: center;
+        width: 100%;
+        z-index: 1;
+
+    }
+
+}

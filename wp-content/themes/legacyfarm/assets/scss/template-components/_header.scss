@@ -1,0 +1,31 @@
+/******************************************
+Header Styles
+******************************************/
+
+#site-header {
+    background: $audubonRed;
+    display: flex;
+        align-items: center;
+        justify-content: space-between;
+    position: relative;
+    z-index: 2000;
+
+    @include breakpoint(mediumScreen) {
+        flex-direction: row;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:focus, &:hover {
+            text-decoration: underline;
+        }
+        &:after {
+            display: none;
+        }
+    }
+}
+
+.site-description {
+    display: none;
+}

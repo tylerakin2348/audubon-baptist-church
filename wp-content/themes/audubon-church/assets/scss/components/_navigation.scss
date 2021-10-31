@@ -200,6 +200,7 @@ Navigation Styles
 }
 
 .toggle-submenu {
+    vertical-align: middle;
     display: none;
     @include breakpoint(mediumScreen) {
         background: none;

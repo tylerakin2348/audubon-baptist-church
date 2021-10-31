@@ -4,38 +4,56 @@
 
 
 // Foundational styles
-@import "vars";
-@import "mixins";
-
+@import "base-styles/vars";
+@import "base-styles/mixins";
+@import "base-styles/buttons";
 
 // Components
-@import "components/blog";
-@import "components/footer";
-@import "components/general";
-@import "components/header";
-@import "components/navigation";
+@import "template-components/blog";
+@import "template-components/blog-single";
+@import "template-components/footer";
+@import "template-components/general";
+@import "template-components/header";
+@import "template-components/layout-fragments/navigation/main-navigation";
 
-// Components/layouts
-@import "components/layouts/two-column";
-@import "components/layouts/three-column";
-@import "components/layouts/content-columns";
-@import "components/layouts/default";
-@import "components/layouts/full-width";
-@import "components/layouts/half-and-half";
-@import "components/layouts/media-object";
-@import "components/layouts/page-header";
+// Header Fragments
+@import "template-components/layout-fragments/header-fragments/hamburger-menu";
+@import "template-components/layout-fragments/header-fragments/site-logo";
+@import "template-components/layout-fragments/blog-categories";
+@import "template-components/layout-fragments/blog-meta";
+@import "template-components/layout-fragments/slider";
+@import "template-components/layout-fragments/navigation/blog-pagination";
+@import "template-components/layout-fragments/navigation/blog-single-next-prev-links";
 
-// Components/layouts/partials
-@import "components/layouts/partials/events";
-@import "components/layouts/partials/latest-sermon";
-@import "components/layouts/partials/homepage-header";
-@import "components/layouts/partials/homepage-slider";
-@import "components/layouts/partials/seventy-fifth-anniversary";
-@import "components/layouts/partials/our-story";
-@import "components/layouts/partials/weekly-schedule";
+// template-components/layouts
+@import "template-components/layouts/latest-animals-for-sale";
+@import "template-components/layouts/default";
+@import "template-components/layouts/full-width";
+@import "template-components/layouts/half-and-half";
+@import "template-components/layouts/two-thirds";
+@import "template-components/layouts/image-gallery";
+@import "template-components/layouts/page-header";
+@import "template-components/layouts/default-page-header";
+@import "template-components/layouts/two-column";
+@import "template-components/layouts/three-column";
+@import "template-components/layouts/content-columns";
+@import "template-components/layouts/media-object";
+
+
+// template-components/layouts/partials
+@import "template-components/layouts/partials/homepage-slider";
+@import "template-components/layouts/partials/latest-blog_posts";
+@import "template-components/layouts/partials/great-pyrenees-animal-list";
+@import "template-components/layouts/partials/events";
+@import "template-components/layouts/partials/latest-sermon";
+@import "template-components/layouts/partials/homepage-header";
+@import "template-components/layouts/partials/our-story";
+@import "template-components/layouts/partials/weekly-schedule";
 
 // Components/template-styles
-@import "components/template-styles/appreciating";
-@import "components/template-styles/front-page";
-@import "components/template-styles/full-width-template";
-@import "components/template-styles/sermons";
+@import "template-components/template-styles/appreciating";
+@import "template-components/template-styles/front-page";
+@import "template-components/template-styles/full-width-template";
+@import "template-components/template-styles/sermons";
+
+

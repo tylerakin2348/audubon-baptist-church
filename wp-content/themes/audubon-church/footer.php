@@ -11,9 +11,14 @@
 
                 // output the field value
                 echo $copyright;
+                global $template; 
+                echo basename($template); 
+                echo 'asdfasdf'; 
+
             ?>
         </p>
     </div>
+    
 </footer>
 <script src="<?php bloginfo('template_directory');?>/assets/js/jquery.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>

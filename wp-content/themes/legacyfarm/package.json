@@ -5,12 +5,20 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2"
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w sass/ -o css/"
+      "gulp": "gulp",
+      "gulp-sass": "gulp sass",
+      "gulp-js": "gulp js",
+      "gulp-watch": "gulp watch"
   },
   "keywords": [],
   "author": "",

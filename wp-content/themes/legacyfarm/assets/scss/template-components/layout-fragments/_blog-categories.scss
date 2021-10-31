@@ -1,0 +1,112 @@
+.blog-categories {
+    box-shadow: 0 0 2px 0px grey;
+
+    @include breakpoint(mediumScreen) {
+        box-shadow: 0 0;
+
+    }
+
+    &__toggle {
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 auto;
+        padding: 2em 1em;
+        position: relative;
+        width: 100%;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            height: 2em;
+            transform: rotate(0deg);
+            width: 2em;
+            background-image: url("../../assets/icons/arrow-black.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            transition: transform .35s ease-in-out;
+        }
+
+        &.open-toggle {
+            &:after {
+                transform: rotate(180deg);
+                transition: transform .35s ease-in-out;
+            }
+        }
+    }
+
+    &__list {
+        // ul
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        margin: 0 auto;
+        padding: 2em 1em;
+        padding-top: 0;
+        width: 90%;
+        list-style: none;
+
+        @include breakpoint(mediumScreen) {
+            display: flex;
+            flex-direction: row;
+            padding-top: 2em;
+        }
+
+        .cat-item {
+            margin: 0;
+            padding-left: 0;
+            position: relative;
+
+            &:not(:last-child) {
+
+                a {
+                    border-bottom: 1px solid #bfbfbf;
+
+                    @include breakpoint(mediumScreen) {
+                        border-bottom: 0;
+                    }
+
+                }
+
+                &:after {
+
+                    @include breakpoint(mediumScreen) {
+                        content: "";
+                        border-right: 2px solid $audubonRed;
+                        height: 100%;
+                        // margin-left: 2em;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        z-index: 0;
+                    }
+                }
+            }
+
+            &.current-cat a {
+                // border-left: .5em solid $audubonRed;
+                // padding-left: .5em;
+            }
+        }
+
+        .cat-item a {
+            padding: 1em;
+            text-align: left;
+            width: 100%;
+
+            @include breakpoint(mediumScreen) {
+                width: auto;
+            }
+
+        }
+
+        &.expanded-list {
+            display: flex;
+        }
+    }
+}

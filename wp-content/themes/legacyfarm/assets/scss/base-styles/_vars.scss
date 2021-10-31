@@ -1,0 +1,21 @@
+/*
+* Variables Style Sheet
+*/
+
+// Color variables
+$black: #000000;
+$blackOverlay: $black;
+$white: #ffffff;
+$audubonRed: #720101;
+$audubonRedLight: lighten($audubonRed, 4%);
+$audubonRedDark: darken($audubonRed, 4%);
+
+
+
+// Breakpoints
+$smallScreen: 800px;
+
+// Container Sizes
+$smallWidth: 44rem;
+$primaryWidth: 55rem;
+$largeWidth: 76rem;

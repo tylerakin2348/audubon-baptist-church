@@ -255,6 +255,7 @@ function crb_attach_post_meta() {
 					    ->add_options( array(
 							'' => '',
 							'homepage-header-partial' => 'Homepage Header Partial',
+							'homepage-slider-partial' => 'Homepage Slider Partial',
 							'weekly-schedule-partial' => 'Weekly Schedule Partial',
 							'seventy-fifth-partial' => '75th Anniversary Partial',
 					        'beliefs-partial' => 'Belief Partial',
@@ -389,6 +390,7 @@ function crb_attach_post_meta() {
      register_post_type( 'sermons', $args );
 
  }
+ 
  add_action( 'init', 'wpse239701_events_post_type' );
 
  function wpse239701_events_taxonomy() {
