@@ -153,3 +153,32 @@
     }
 
 }
+
+
+
+.latest-sermon-slider-partial {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    .layout-slider__slide-partial {
+        width: 100%;
+    }
+    .latest-sermon {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+
+        padding: 0;
+        &:after {
+            background-color: rgba(0,0,0, .8);
+        }
+
+        .contain {
+            height: 100%;
+            justify-content: center;
+        }
+       
+    }
+}

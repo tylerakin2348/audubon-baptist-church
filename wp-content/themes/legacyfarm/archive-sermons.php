@@ -99,8 +99,10 @@ get_header();
 
         <div class="navigation pagination" role="navigation">
             <div class="nav-links">
-                <span class="newer"><?php previous_posts_link(__('« Newer','example')) ?></span> 
-                <span class="older"><?php next_posts_link(__('Older »','example')) ?></span>
+                <span class="newer"><?php previous_posts_link(__('« Newer Sermons','example')) ?></span> 
+
+                
+                <span class="older"><?php next_posts_link(__('Older Sermons »','example')) ?></span>
             </div>
          </div>
 

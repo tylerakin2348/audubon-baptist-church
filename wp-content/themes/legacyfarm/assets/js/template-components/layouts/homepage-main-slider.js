@@ -2,10 +2,11 @@ jQuery('.layout-slider').each(function() {
     var that = this;
     
     var $gallery = jQuery(that).find('.carousel').flickity({
-        prevNextButtons: false,
+        // prevNextButtons: false,
         pageDots: false,
         wrapAround: true,
         cellAlign: 'left',
+        draggable: false
     });
 
     // Flickity instance

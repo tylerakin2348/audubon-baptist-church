@@ -6,14 +6,23 @@
 <div class="layout layout-slider">
     <div class="carousel">
         <?php $slideRows = $section['homepage_main_slider'];
-        foreach ( $slideRows as $slideRow ) : ?>
-            <?php $image = $slideRow;
-            $imageSrc = $image["homepage_slide_image"]; ?>
-            <div class="layout-slider__slide">
-                <img src="<?php echo $imageSrc; ?>" alt="">
-                <div class="layout-slider__content contain">
-                 <?php echo wpautop($slideRow['homepage_slide_content']); ?>
-                </div>
+        foreach ( $slideRows as $slideRow ) :
+            $image = $slideRow;
+            $imageSrc = $image["homepage_slide_image"];
+            $textIsPresent = $slideRow['homepage_slide_content'] == '' ? '' : 'darken-background' ?>
+
+            <div class="layout-slider__slide <?php echo $textIsPresent; ?>">
+                <?php if ($imageSrc) { ?>
+                    <img src="<?php echo $imageSrc; ?>" alt="">
+                <?php } ?>
+
+                <?php if ($slideRow['partial_slide']) {
+                    include(get_template_directory() . '/template-components/layouts/partials/homepage-slider/' . $slideRow['partial_slide'] . '.php');
+                } else { ?>
+                    <div class="layout-slider__content contain">
+                        <?php echo wpautop($slideRow['homepage_slide_content']); ?>
+                    </div>
+                <?php } ?>
             </div>
         <?php endforeach; ?>
     </div>

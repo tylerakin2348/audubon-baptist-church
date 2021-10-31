@@ -28,7 +28,28 @@ function crb_homepage_fields() {
 				Field::make( 'complex', 'homepage_main_slider', 'Slides' )->add_fields( array(
 					Field::make( 'image', 'homepage_slide_image', 'Slide Image' )
 					->set_value_type( 'url' ),
+
 					Field::make( 'rich_text', 'homepage_slide_content', 'Content' )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'use_partial_slide',
+							'value' => false
+						),
+					)),
+
+					Field::make( 'checkbox', 'use_partial_slide', 'Use Partial Slide' ),
+
+					Field::make( 'select', 'partial_slide', '' )
+					->add_options( array(
+						'choose_a_slide_partial' => 'Choose a slide partial',
+						'latest-sermon' => 'Latest Sermon'
+					) )
+					->set_conditional_logic( array(
+						array(
+							'field' => 'use_partial_slide',
+							'value' => true
+						),
+					))
 				))
 				->set_conditional_logic( array(
 						array(
