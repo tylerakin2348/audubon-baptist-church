@@ -3,6 +3,48 @@
     padding: 2em 1em;
     position: relative;
 
+    h1, h2, h3, h4, h5, h6, p, span {
+        color: $white;
+        font-weight: 700;
+    }
+
+    .button {
+        @extend .button--white-outline;
+        padding: 1em;
+        // padding: 1em 0;
+        // color: $white;
+        // text-align: center;
+        // margin: 0 auto;
+        // display: inline-block;
+        // font-weight: 700;
+        // transition: .35s all ease-in-out;
+        // position: relative;
+        // overflow: hidden;
+        // text-align: center;
+        // &:after {
+        //     background-color: $white;
+        //     content: '';
+        //     height: .25em;
+        //     width: 100%;
+        //     display: block;
+        //     position: absolute;
+        //     margin-top: .25em;
+        //     opacity: 1;
+        //     width: 100%;
+        //     transition: .35s all ease-in-out;
+
+        // }
+        // &:focus,
+        // &:hover {
+        //     transition: .35s all ease-in-out;
+        //     &:after {
+        //         opacity: 0;
+        //         margin-top: 1em;
+        //         transition: .35s all ease-in-out;
+        //     }
+
+        // }
+    }
 
     h2 {
         margin-bottom: 2em;
@@ -110,46 +152,6 @@
             background-color: #720101;
         }
 
-        h1, h2, h3, h4, h5, h6, p, span {
-            color: $white;
-            font-weight: 700;
-        }
-
-        .button {
-            padding: 1em 0;
-            color: $white;
-            text-align: center;
-            margin: 0 auto;
-            display: inline-block;
-            font-weight: 700;
-            transition: .35s all ease-in-out;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            &:after {
-                background-color: $white;
-                content: '';
-                height: .25em;
-                width: 100%;
-                display: block;
-                position: absolute;
-                margin-top: .25em;
-                opacity: 1;
-                width: 100%;
-                transition: .35s all ease-in-out;
-
-            }
-            &:focus,
-            &:hover {
-                transition: .35s all ease-in-out;
-                &:after {
-                    opacity: 0;
-                    margin-top: 1em;
-                    transition: .35s all ease-in-out;
-                }
-
-            }
-        }
     }
 
 }

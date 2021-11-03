@@ -18,6 +18,27 @@
     }
 }
 
+@mixin button-outline($primary-color, $secondary-color) {
+    background-color: transparent;
+    color: $primary-color;
+    border: .1em solid $primary-color;
+    font-weight: 700;
+    padding: .5em 2.5em;
+    text-decoration: none;
+    transition: .35s all ease-in-out;
+
+    &:after {
+        display: none;
+    }
+
+    // &:focus,
+    // &:hover {
+    //     background-color: transparent;
+    //     color: $primary-color;
+    // }
+}
+
+
 .button {
     @include button($audubonRed, $white);
 
@@ -27,5 +48,9 @@
 
     &--red-bg {
         @include button($white, $black);
+    }
+
+    &--white-outline {
+        @include button-outline($white, $black);
     }
 }
