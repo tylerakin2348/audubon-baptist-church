@@ -1,9 +1,8 @@
 .blog-categories {
     box-shadow: 0 0 2px 0px grey;
 
-    @include breakpoint(mediumScreen) {
+    @include breakpoint(large-screen-min) {
         box-shadow: 0 0;
-
     }
 
     &__toggle {
@@ -51,7 +50,7 @@
         width: 90%;
         list-style: none;
 
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(large-screen-min) {
             display: flex;
             flex-direction: row;
             padding-top: 2em;
@@ -67,7 +66,7 @@
                 a {
                     border-bottom: 1px solid #bfbfbf;
 
-                    @include breakpoint(mediumScreen) {
+                    @include breakpoint(large-screen-min) {
                         border-bottom: 0;
                     }
 
@@ -75,7 +74,7 @@
 
                 &:after {
 
-                    @include breakpoint(mediumScreen) {
+                    @include breakpoint(large-screen-min) {
                         content: "";
                         border-right: 2px solid $audubonRed;
                         height: 100%;
@@ -99,7 +98,7 @@
             text-align: left;
             width: 100%;
 
-            @include breakpoint(mediumScreen) {
+            @include breakpoint(large-screen-min) {
                 width: auto;
             }
 
@@ -110,3 +109,37 @@
         }
     }
 }
+
+.blog-categories.desktop-categories {
+    display: flex;
+    position: relative;
+
+    > ul {
+        > li {
+            margin-left: 0;
+            padding: 0;
+        }
+    }
+    .blog-categories__list.floating {
+        box-shadow: 0 0 1px 1px #ddd;
+        display: none;
+        position: absolute;
+        background: white;
+        z-index: 1111;
+        width: auto;
+        top: 90%;
+        right: 0%;
+        &.expanded-list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            margin: 0;
+        }
+    }
+    .blog-categories__toggle {
+        width: auto;
+    }
+}
+

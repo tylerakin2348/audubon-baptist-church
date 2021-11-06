@@ -8,7 +8,7 @@
     &__container {
         display: flex;
             flex-direction: column;
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 align-items: center;
                 flex-direction: row;
                 justify-content: center;
@@ -20,7 +20,7 @@
         margin-bottom: .5em;
         padding: 6em 2em;
         max-width: 31rem;
-        @include breakpoint(mobile) {
+        @include breakpoint(mobile-min) {
             margin-bottom: 0em;
             margin-right: 3.5em;
             width: 100%;
@@ -71,7 +71,7 @@
     }
     &.image-text {
         .half-and-half__content {
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 margin-left: 3.5em;
             }
         }

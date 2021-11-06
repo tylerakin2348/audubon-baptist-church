@@ -7,11 +7,11 @@
 //     position: relative;
 //     z-index: 1;
 
-//     @include breakpoint(mediumScreen) {
+//     @include breakpoint(medium-screen-min) {
 //         display: inline-block;
 //     }
 
-//     @include breakpoint(mediumScreen) {
+//     @include breakpoint(medium-screen-min) {
 //         display: inline-block;
 //         padding-right: 1.5rem;
 //     }
@@ -31,7 +31,7 @@
 //                 padding: 0;
 //                 font-weight: 400;
 
-//                 @include breakpoint(mediumScreen) {
+//                 @include breakpoint(medium-screen-min) {
 //                     padding: 1em;
 //                 }
 
@@ -42,7 +42,7 @@
 
 //             &:last-of-type {
 //                 a {
-//                     @include breakpoint(mediumScreen) {
+//                     @include breakpoint(medium-screen-min) {
 //                         padding-right: 0rem;
 //                     }
 //                 }
@@ -78,7 +78,7 @@
 //                 line-height: 1em;
 //                 transition: all .5s ease;
 
-//                 @include breakpoint(mediumScreen) {
+//                 @include breakpoint(medium-screen-min) {
 //                     display: none;
 //                     // This hides the sub-menu to enable the hide/show reveal on hover
 //                     margin: 0em .75em;
@@ -104,7 +104,7 @@
 //                         margin: 0 auto;
 //                         width: 100%;
 
-//                         @include breakpoint(mediumScreen) {
+//                         @include breakpoint(medium-screen-min) {
 //                             padding: 1em 0;
 //                         }
 //                     }
@@ -116,7 +116,7 @@
 //                     max-height: 25em;
 //                     transition: all .5s ease;
 
-//                     @include breakpoint(mediumScreen) {
+//                     @include breakpoint(medium-screen-min) {
 //                         background: $audubonRedLight;
 //                         box-shadow: 0 0 4px;
 //                         display: inline-block;
@@ -129,7 +129,7 @@
 //                     justify-content: center;
 //                     transition: all .5s ease;
 
-//                     @include breakpoint(mediumScreen) {
+//                     @include breakpoint(medium-screen-min) {
 //                         display: inline-block;
 //                         min-width: 10em;
 //                     }
@@ -141,7 +141,7 @@
 //                         margin: 0 auto;
 //                         width: 100%;
 
-//                         @include breakpoint(mediumScreen) {
+//                         @include breakpoint(medium-screen-min) {
 //                             background: $audubonRedLight;
 //                             padding: 1em 0;
 //                         }
@@ -159,7 +159,7 @@
 //                         margin: 0;
 //                         transition: all .5s ease;
 
-//                         @include breakpoint(mediumScreen) {
+//                         @include breakpoint(medium-screen-min) {
 //                             display: inline-block;
 //                             min-width: 10em;
 //                         }
@@ -171,7 +171,7 @@
 //                             margin: 0 auto;
 //                             width: 100%;
 
-//                             @include breakpoint(mediumScreen) {
+//                             @include breakpoint(medium-screen-min) {
 //                                 background: $audubonRedLight;
 //                                 padding: 1em 0;
 //                             }
@@ -204,7 +204,7 @@
 //             display: flex;
 //             flex-direction: column;
 
-//             @include breakpoint(mediumScreen) {
+//             @include breakpoint(medium-screen-min) {
 //                 flex-direction: row;
 //             }
 
@@ -222,7 +222,7 @@
 // .toggle-submenu {
 //     display: none;
 
-//     @include breakpoint(mediumScreen) {
+//     @include breakpoint(medium-screen-min) {
 //         background: none;
 //         cursor: pointer;
 //         border: 0;

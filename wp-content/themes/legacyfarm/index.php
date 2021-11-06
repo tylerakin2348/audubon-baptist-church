@@ -15,7 +15,6 @@ wp_enqueue_script( 'blog-post-grid' );
 <?php include 'template-components/layouts/partials/default-page-header.php'; ?>
     <a class="assistive show-on-focus" href="#pagination">Skip to blog pagination</a>
 
-    <?php include 'wp-content/themes/legacyfarm/template-components/layout-fragments/blog-categories.php'; ?>
     <?php
      if ( have_posts() ) : ?>
      <div class="blog-posts">
@@ -29,7 +28,7 @@ wp_enqueue_script( 'blog-post-grid' );
                 <h2><?php the_title(); ?></h2>
 
                 <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>">Read this post</a>
+                <a href="<?php the_permalink(); ?>">Read more</a>
             </div>
         </div>
         <?php endwhile; ?>

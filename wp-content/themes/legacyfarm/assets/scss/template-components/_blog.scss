@@ -16,7 +16,7 @@
         margin: .5rem;
         width: 90%;
         
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             width: 46%;
         }
 

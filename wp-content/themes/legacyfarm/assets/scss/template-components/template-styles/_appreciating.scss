@@ -9,7 +9,7 @@
     .inner-container {
         display: flex;
             flex-direction: column;
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 flex-direction: row;
                 flex-wrap: wrap;
             }
@@ -24,7 +24,7 @@
             margin-bottom: .5em;
             overflow: hidden;
             padding: 2%;
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 height: 12vw;
                     max-height: 10em;
                 margin-bottom: 0em;

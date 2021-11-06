@@ -10,7 +10,7 @@ Header Styles
     position: relative;
     z-index: 2000;
 
-    @include breakpoint(mediumScreen) {
+    @include breakpoint(medium-screen-min) {
         flex-direction: row;
     }
 

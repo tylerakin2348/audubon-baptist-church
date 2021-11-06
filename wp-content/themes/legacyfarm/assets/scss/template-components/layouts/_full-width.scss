@@ -36,7 +36,7 @@
                     justify-content: space-around;
                 margin: 0 auto;
                 max-width: 60em;
-                @include breakpoint(mobile) {
+                @include breakpoint(mobile-min) {
                   flex-direction: row;
                 }
             }
@@ -100,7 +100,7 @@
         justify-content: space-around;
     margin: 0 auto;
     max-width: 60em;
-    @include breakpoint(mobile) {
+    @include breakpoint(mobile-min) {
       flex-direction: row;
     }
 }

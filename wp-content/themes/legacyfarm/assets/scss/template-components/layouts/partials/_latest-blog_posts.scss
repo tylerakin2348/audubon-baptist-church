@@ -19,7 +19,7 @@
         width: 87%;
         z-index: 1;
         
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             padding-bottom: 0em;
         }
     }
@@ -36,7 +36,7 @@
         margin: 0 auto;
         padding: 2em 0em;
         width: 100%;
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             width: 30%;
         }
         
@@ -67,7 +67,7 @@
             position: absolute;
         bottom: .2em;
         z-index: 123;
-         @include breakpoint(mediumScreen) {
+         @include breakpoint(medium-screen-min) {
             bottom: auto;
             left: 0;
             top: 50%;
@@ -78,7 +78,7 @@
 
     .button--previous {
         right: 4em;
-         @include breakpoint(mediumScreen) {
+         @include breakpoint(medium-screen-min) {
             right: auto;
         }
     }
@@ -86,7 +86,7 @@
     .button--next {
         left: auto;
         right: 1em;
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             right: 0;
             transform: translateY(-50%) rotate(-90deg);
         }

@@ -7,7 +7,7 @@
 $thePageTitle = '';
 global $template; 
 if ( is_home()) {
-    $thePageTitle = 'Blog';
+    $thePageTitle = 'Our Monthly Newsletter';
 } elseif(is_post_type_archive('for-sale')) {
     $thePageTitle = post_type_archive_title( '', false );
 } elseif( is_archive() ) {
@@ -30,12 +30,12 @@ if ( is_home()) {
         <div class="default-page-header__image">
             
           <?php $thePostFeaturedImage = get_the_post_thumbnail(); ?>
-
+        
         <?php if (is_single() && $thePostFeaturedImage) { ?>
             <?php echo $thePostFeaturedImage;?>
-        <?php } else { ?>
+        <?php } elseif (carbon_get_theme_option( 'blog_header_image' )) { ?>
              <img src="<?php echo carbon_get_theme_option( 'blog_header_image' ); ?>" />
-        <?php } ?>
+        <?php } else {} ?>
         </div>
     </div>
         

@@ -20,6 +20,7 @@ get_header();
 </div>
 <div class="sermons">
     <div class="contain">
+        <?php include 'wp-content/themes/legacyfarm/template-components/layout-fragments/sermon-categories.php'; ?>
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
@@ -37,28 +38,6 @@ get_header();
             $args,                                 
         );
         ?>
-        <?php //https://developer.wordpress.org/reference/functions/get_term_link/ ?>
-        <?php $terms = get_terms( 'series' );
-        if (sizeof($terms) > 0) {
-            echo '<ul class="categories">';
-
-            foreach ( $terms as $term ) {
-        
-                // The $term is an object, so we don't need to specify the $taxonomy.
-                $term_link = get_term_link( $term );
-        
-                // If there was an error, continue to the next term.
-                if ( is_wp_error( $term_link ) ) {
-                    continue;
-                }
-                // We successfully got a link. Print it out.
-                echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
-            }
-        
-            echo '</ul>';
-        }
-        ?>
-        
         <div class="sermon-container">
             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
         ?>

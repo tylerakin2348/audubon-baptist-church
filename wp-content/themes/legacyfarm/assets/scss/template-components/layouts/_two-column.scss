@@ -9,7 +9,7 @@
     .inner-container {
         display: flex;
             flex-direction: column;
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 flex-direction: row;
                 justify-content: center;
             }
@@ -22,7 +22,7 @@
             margin-bottom: .5em;
             overflow: hidden;
             padding: 0em;
-            @include breakpoint(mobile) {
+            @include breakpoint(mobile-min) {
                 margin-bottom: 0em;
                 margin-right: .5em;
                 margin: 0% 0%;
@@ -55,7 +55,7 @@
                 z-index: 1;
             }
             &:last-of-type {
-                @include breakpoint(mobile) {
+                @include breakpoint(mobile-min) {
                     margin-left: 2.5%;
                 }
             }
@@ -98,7 +98,7 @@
     padding: 1rem;
     text-align: center;
     iframe {
-        @include breakpoint(smallScreenOnly) {
+        @include breakpoint(small-screen-max) {
             width: 100%;
         }
     }

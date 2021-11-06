@@ -30,7 +30,7 @@
 .media-object {
     img {
         width: 100%;
-        @include breakpoint(mobile) {
+        @include breakpoint(mobile-min) {
             width: auto;
         }
     }

@@ -4,4 +4,8 @@
     a:after {
         background-color: $audubonRed;
     }
+
+    &__content {
+        padding: 1em 0;
+    }
 }

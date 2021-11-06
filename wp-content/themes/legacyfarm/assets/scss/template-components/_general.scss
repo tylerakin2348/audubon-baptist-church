@@ -365,12 +365,12 @@ Heading Styles
         width: 30%;
         vertical-align: bottom;
 
-        @include breakpoint(mobile) {
+        @include breakpoint(mobile-min) {
             width: 25%;
             vertical-align: middle;
         }
 
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             width: 18%;
         }
     }

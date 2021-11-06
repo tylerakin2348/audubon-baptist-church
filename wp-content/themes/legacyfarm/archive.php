@@ -32,13 +32,7 @@ get_header();
                 <div class="contain">
                 <?php
                     $term_obj_list = get_the_terms( $the_query->ID, 'series' ); ?>
-                    <div class="blog-categories">
-                        <?php
-                        foreach ( $term_obj_list as $term ) {
-                            $term_link = get_term_link( $term ); ?>
-                            <span><?php echo $term->name; ?></span>
-                        <?php } ?>
-                    </div>
+                    
                     <div class="latest-sermon__title">
                         <h3><?php the_title() ?></h3>
                     </div>

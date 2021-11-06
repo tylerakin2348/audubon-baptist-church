@@ -6,10 +6,10 @@ Navigation Styles
     display: none;
     position: relative;
     z-index: 1;
-    @include breakpoint(mediumScreen) {
+    @include breakpoint(medium-screen-min) {
         display: inline-block;
     }
-    @include breakpoint(mediumScreen) {
+    @include breakpoint(medium-screen-min) {
         display: inline-block;
         padding-right: 1.5rem;
     }
@@ -25,7 +25,7 @@ Navigation Styles
                 font-weight: 400;
                 margin: 0 auto;
                 padding: 0;
-                @include breakpoint(mediumScreen) {
+                @include breakpoint(medium-screen-min) {
                     padding: 1em;
                 }
                 &:hover {
@@ -34,7 +34,7 @@ Navigation Styles
             }
             &:last-of-type {
                 a {
-                    @include breakpoint(mediumScreen) {
+                    @include breakpoint(medium-screen-min) {
                         padding-right: 0rem;
                     }
                 }
@@ -67,7 +67,7 @@ Navigation Styles
                 transition: all .5s ease;
                 z-index: 99;
                 overflow: hidden;
-                @include breakpoint(mediumScreen) {
+                @include breakpoint(medium-screen-min) {
                     // This hides the sub-menu to enable the hide/show reveal on hover
                     margin: 0em .75em;
                     display: none;
@@ -92,7 +92,7 @@ Navigation Styles
                             width: 100%;
                             margin: 0 auto;
                             display: block;
-                            @include breakpoint(mediumScreen) {
+                            @include breakpoint(medium-screen-min) {
                                 padding: 1em 0;
                             }
                         }
@@ -101,7 +101,7 @@ Navigation Styles
                     transition: all .5s ease;
                     justify-content: center;
                     max-height: 25em;
-                    @include breakpoint(mediumScreen) {
+                    @include breakpoint(medium-screen-min) {
                         background: $audubonRedLight;
                         display: inline-block;
                         min-width: 10em;
@@ -112,7 +112,7 @@ Navigation Styles
                         transition: all .5s ease;
                         justify-content: center;
 
-                        @include breakpoint(mediumScreen) {
+                        @include breakpoint(medium-screen-min) {
                             display: inline-block;
                             min-width: 10em;
                         }
@@ -124,7 +124,7 @@ Navigation Styles
                             width: 100%;
                             margin: 0 auto;
                             display: block;
-                            @include breakpoint(mediumScreen) {
+                            @include breakpoint(medium-screen-min) {
                                 background: $audubonRedLight;
                                 padding: 1em 0;
                             }
@@ -141,7 +141,7 @@ Navigation Styles
                             transition: all .5s ease;
                             justify-content: center;
                             margin: 0;
-                            @include breakpoint(mediumScreen) {
+                            @include breakpoint(medium-screen-min) {
                                 display: inline-block;
                                 min-width: 10em;
                             }
@@ -154,7 +154,7 @@ Navigation Styles
                                 width: 100%;
                                 margin: 0 auto;
                                 display: block;
-                                @include breakpoint(mediumScreen) {
+                                @include breakpoint(medium-screen-min) {
                                     background: $audubonRedLight;
                                     padding: 1em 0;
                                 }
@@ -185,7 +185,7 @@ Navigation Styles
         ul.menu {
             display: flex;
                 flex-direction: column;
-                @include breakpoint(mediumScreen) {
+                @include breakpoint(medium-screen-min) {
                     flex-direction: row;
                 }
             & > li {
@@ -203,7 +203,7 @@ Navigation Styles
     display: none;
     position: relative;
 
-    @include breakpoint(mediumScreen) {
+    @include breakpoint(medium-screen-min) {
         background: 0 0;
         cursor: pointer;
         border: 0;
@@ -236,7 +236,7 @@ Navigation Styles
     }
 
     &.submenu-active {
-        @include breakpoint(mediumScreen) {
+        @include breakpoint(medium-screen-min) {
             transform: rotate(180deg);
             transition: transform .35s ease-in-out;
         }

@@ -24,7 +24,7 @@
         margin: .5em;
         width: 100%;
 
-        @include breakpoint(mobile) {
+        @include breakpoint(mobile-min) {
             width: 30.33%;
         }
     }

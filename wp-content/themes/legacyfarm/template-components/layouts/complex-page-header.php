@@ -16,7 +16,7 @@
                 <?php echo wpautop($section['page_header_content']); ?>
             </div>
         </div>
-    <div class="page-header__right mobile-hidden">
+    <div class="page-header__right mobile-only-hidden">
         <?php $image = $section['page_header_image'];
         if ($image) : ?>
         <div class="page-header__image">

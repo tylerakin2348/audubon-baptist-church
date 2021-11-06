@@ -1,7 +1,7 @@
 <?php if ($section['half_and_half_format_selector'] === 'text_image') { ?>
     <div class="layout half-and-half">
         <div class="contain half-and-half__container">
-            <div class="half-and-half__content mobile-hidden">
+            <div class="half-and-half__content mobile-only-hidden">
                 <?php echo wpautop($section['text_image_half_and_half_text']); ?>
             </div>
             <?php $image = $section['text_image_half_and_half_image'];
@@ -10,7 +10,7 @@
                     <img src="<?php echo $image; ?>" alt="">
                 </div>
             <?php endif; ?>
-            <div class="half-and-half__content desktop-hidden">
+            <div class="half-and-half__content desktop-only-hidden">
                 <?php echo wpautop($section['text_image_half_and_half_text']); ?>
             </div>
         </div>
