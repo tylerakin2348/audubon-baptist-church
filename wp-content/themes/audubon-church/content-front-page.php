@@ -2,6 +2,6 @@
 
    <?php the_content(); ?>
 
-   <?php include 'templates/carbon-fields/carbon-fields-layouts.php'; ?>
+   <?php include 'templates/carbon-fields/carbon-fields-homepage-layouts.php'; ?>
 
 </div>

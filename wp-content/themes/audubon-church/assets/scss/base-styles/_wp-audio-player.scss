@@ -1,0 +1,58 @@
+#main-content {
+        
+    .mejs-time-total {
+        background-color: rgba(145, 141, 141, .9) !important;
+        height: 4em;
+        top: 0;
+        margin: 0;
+    }
+
+    .mejs-time-loaded {
+        background-color: rgba(145, 141, 141, .9) !important;
+    }
+
+    .mejs-time-float {
+        .mejs-time-float-current {
+            color: $black;
+        }
+    }
+
+    .mejs-time-current {
+        height: 100%;
+    }
+
+    .mejs-time-handle {
+        background-color: #723F01;
+    }
+
+    .mejs-container {
+        // box-shadow: 0 0 1px 8px #9a886d;
+        height: auto !important;
+        width: 100%;
+        margin-bottom: 1em;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .mejs-inner {
+            display: block;
+            width: 100%;
+        }
+
+    }
+
+    .mejs-controls {
+        background-color: $audubonRedDark;
+        height: auto;
+        padding: 2em 1em;
+        position: relative;
+        border: transparent;
+        box-shadow: 0 0 8px 3px;
+    }
+
+    .mejs-controls .mejs-time-rail .mejs-time-current {
+        background-color: #720101;
+    }
+
+
+}

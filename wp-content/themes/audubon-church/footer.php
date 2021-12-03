@@ -1,7 +1,8 @@
+</main>
 <footer id="foot" class="foot">
     <div class="foot-content">
         <p>
-          <a href="index.php" class="to-top">Back to Top</a>
+          <a href="index.php" class="to-top"><span class="assistive">Back to Top</span></a>
             <br />
             <br />
           &copy; <?php echo date("Y"); ?> Web Interest Site Design
@@ -11,20 +12,16 @@
 
                 // output the field value
                 echo $copyright;
-                global $template; 
-                echo basename($template); 
-                echo 'asdfasdf'; 
-
             ?>
+
         </p>
+          <a href="<?php echo get_home_url() . '/sitemap'; ?>">Sitemap</a>
+
     </div>
-    
 </footer>
-<script src="<?php bloginfo('template_directory');?>/assets/js/jquery.js"></script>
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script> -->
-<script src="<?php bloginfo('template_directory');?>/assets/js/slick.js"></script>
-<script src="<?php bloginfo('template_directory');?>/assets/js/main.js"></script>
+
+<?php
+// global $template; echo basename($template); ?>
 
 <?php wp_footer(); ?>
 

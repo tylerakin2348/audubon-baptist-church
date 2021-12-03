@@ -20,38 +20,24 @@ get_header();
 </div>
 <div class="sermons">
     <div class="contain">
+        <?php include 'template-components/layout-fragments/sermon-categories.php'; ?>
         <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
         $args = array(
         'orderby' => 'title',
         'post_type' => 'sermons',
-        'posts_per_page' => -1,
+        'posts_per_page' => 3,
         'orderby' => 'date',
         'order' => 'DESC', // Gets the most recent sermon post
-        );
-        $the_query = new WP_Query( $args );
-        ?>
-        <?php //https://developer.wordpress.org/reference/functions/get_term_link/ ?>
-        <?php $terms = get_terms( 'series' );
-        if (sizeof($terms) > 0) {
-            echo '<ul class="categories">';
+        'paged' => $paged,
 
-            foreach ( $terms as $term ) {
-        
-                // The $term is an object, so we don't need to specify the $taxonomy.
-                $term_link = get_term_link( $term );
-        
-                // If there was an error, continue to the next term.
-                if ( is_wp_error( $term_link ) ) {
-                    continue;
-                }
-                // We successfully got a link. Print it out.
-                echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
-            }
-        
-            echo '</ul>';
-        }
+        );
+
+        $the_query = new WP_Query( 
+            $args,                                 
+        );
         ?>
-        
         <div class="sermon-container">
             <?php if ( $the_query->have_posts() ) : while ( $the_query->have_posts() ) : $the_query->the_post();
         ?>
@@ -80,8 +66,29 @@ get_header();
             </div>
 
             <?php endwhile; else: ?> <p>Sorry, there are no posts to display</p> <?php endif; ?>
-            <?php wp_reset_query(); ?>
+
+        <!-- <nav class="navigation pagination" role="navigation" aria-label="A">
+            <div class="nav-links">
+                <span aria-current="page" class="page-numbers current">1</span>
+                <a class="page-numbers" href="http://audubon-baptist-church.local/newsletters/page/2/">2</a>
+                <a class="page-numbers" href="http://audubon-baptist-church.local/newsletters/page/3/">3</a>
+                <a class="next page-numbers" href="http://audubon-baptist-church.local/newsletters/page/2/">Next Page</a>
+            </div>
+        </nav> -->
+
+        <div class="navigation pagination" role="navigation">
+            <div class="nav-links">
+                <span class="newer"><?php previous_posts_link(__('« Newer Sermons','example')) ?></span> 
+
+                
+                <span class="older"><?php next_posts_link(__('Older Sermons »','example')) ?></span>
+            </div>
+         </div>
+
+        <?php wp_reset_query(); ?>
+        
         </div>
+       
         <br />
 
     </div>

@@ -1,0 +1,21 @@
+.audubon-baptist-logo-partial {
+
+    &:before {
+
+        content: url(../icons/audubon-logo.svg);
+        height: auto;
+        max-width: 40em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        z-index: 1;
+
+        @include breakpoint(medium-screen-min) {
+            .header-content:before {
+                width: 68vw;
+            }
+        }
+    }
+}

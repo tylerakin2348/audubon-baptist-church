@@ -8,13 +8,8 @@
  */
 
 get_header(); ?>
-<div class="layout layout-page-header">
-	<div class="contain">
-			<div class="layout-page-header__content">
-				<h1 class="red-text">404 - This page does not exist</h1>
-			</div>
-	</div>
-</div>
+<?php include 'template-components/layouts/partials/default-page-header.php'; ?>
+
 <div class="layout layout-full-width">
     <div class="full-width-page__container contain">
 		<p>Use the menu if you need to find another page.</p>

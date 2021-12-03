@@ -1,0 +1,24 @@
+.site-logo {
+    display: inline-block;
+    padding-left: 1em;
+    width: 100%;
+    a {
+        color: $white;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 1.45em;
+    }
+
+}
+
+.site-logo__container {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    z-index: 12;
+
+    a {
+        font-weight: 400;
+        font-size: 1.25em;
+    }
+}
