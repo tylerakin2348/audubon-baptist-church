@@ -135,3 +135,48 @@ function wpdocs_add_menu_parent_class( $items ) {
 	
 	return $content;
 });
+
+add_filter( 'post_type_labels_post', 'newsletter_rename_labels' );
+
+/**
+* Rename default post type to newsletter
+*
+* @param object $labels
+* @hooked post_type_labels_post
+* @return object $labels
+* @author comment #2 on https://wordpress.stackexchange.com/questions/9211/changing-admin-menu-labels
+*/
+function newsletter_rename_labels( $labels )
+{
+    # Labels
+    $labels->name = 'Newsletters';
+    $labels->singular_name = 'Newsletter';
+    $labels->add_new = 'Add Newsletter';
+    $labels->add_new_item = 'Add Newsletter';
+    $labels->edit_item = 'Edit Newsletter';
+    $labels->new_item = 'New Newsletter';
+    $labels->view_item = 'View Newsletter';
+    $labels->view_items = 'View Newsletters';
+    $labels->search_items = 'Search Newsletters';
+    $labels->not_found = 'No newsletter found.';
+    $labels->not_found_in_trash = 'No newsletter found in Trash.';
+    $labels->parent_item_colon = 'Parent newsletter'; // Not for "post"
+    $labels->archives = 'Newsletter Archives';
+    $labels->attributes = 'Newsletter Attributes';
+    $labels->insert_into_item = 'Insert into newsletter';
+    $labels->uploaded_to_this_item = 'Uploaded to this newsletter';
+    $labels->featured_image = 'Featured Image';
+    $labels->set_featured_image = 'Set featured image';
+    $labels->remove_featured_image = 'Remove featured image';
+    $labels->use_featured_image = 'Use as featured image';
+    $labels->filter_items_list = 'Filter newsletter list';
+    $labels->items_list_navigation = 'Newsletter list navigation';
+    $labels->items_list = 'Newsletter list';
+
+    # Menu
+    $labels->menu_name = 'Newsletters';
+    $labels->all_items = 'All Newsletters';
+    $labels->name_admin_bar = 'Newsletters';
+
+    return $labels;
+}

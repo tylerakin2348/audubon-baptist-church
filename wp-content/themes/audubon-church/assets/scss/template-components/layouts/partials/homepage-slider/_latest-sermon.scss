@@ -27,7 +27,7 @@
             text-shadow: 0 0 white;
             text-transform: uppercase;
             font-weight: normal;
-            margin-bottom: .25em;
+            margin-bottom: 0;
 
             @include breakpoint(mobile-min) {
                 font-size: 3em;

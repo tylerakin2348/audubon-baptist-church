@@ -12,7 +12,15 @@ get_header();
 wp_enqueue_script( 'blog-post-grid' );
 
 ?>
-<?php include 'template-components/layouts/partials/default-page-header.php'; ?>
+<!-- <?php include 'template-components/layouts/partials/default-page-header.php'; ?> -->
+    <div class="layout layout-page-header">
+        <div class="contain">
+            <div class="layout-page-header__content">
+                <h1 class="red-text">Our Monthly Newsletter</h1>
+            </div>
+        </div>
+    </div>
+        
     <a class="assistive show-on-focus" href="#pagination">Skip to blog pagination</a>
 
     <?php
