@@ -11,3 +11,4 @@
 *.wp-admin
 *.sass-cache
 package-lock.json
+.vscode/
