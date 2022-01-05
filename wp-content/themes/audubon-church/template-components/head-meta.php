@@ -1,6 +1,6 @@
 <head>
   <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Legacy Farm</title>
+  <title>Audubon Church</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400italic,600,700" rel="stylesheet" type="text/css">
   <style>
