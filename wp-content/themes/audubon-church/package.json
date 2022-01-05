@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {},
   "devDependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -15,10 +14,10 @@
     "gulp-uglify": "^3.0.2"
   },
   "scripts": {
-      "gulp": "gulp",
-      "gulp-sass": "gulp sass",
-      "gulp-js": "gulp js",
-      "gulp-watch": "gulp watch"
+    "gulp": "gulp",
+    "gulp-sass": "gulp sass",
+    "gulp-js": "gulp js",
+    "gulp-watch": "gulp watch"
   },
   "keywords": [],
   "author": "",
