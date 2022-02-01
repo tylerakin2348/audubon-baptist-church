@@ -23,7 +23,7 @@ function remove_editor() {
 
 	remove_post_type_support('miniature-nubians', 'editor');
     remove_post_type_support('great-pyrenees', 'editor');
-    remove_post_type_support('sermons', 'editor');
+    // remove_post_type_support('sermons', 'editor');
 
 }
 
