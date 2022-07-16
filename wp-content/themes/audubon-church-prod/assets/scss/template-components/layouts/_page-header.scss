@@ -1,0 +1,11 @@
+.layout-page-header {
+    border-bottom: .25em solid $audubonRed;
+    margin-top: 6rem;
+    padding-bottom: 1rem;
+    a:after {
+        background-color: $audubonRed;
+    }
+    &__content {
+        padding: 1em 0;
+    }
+}

@@ -1,0 +1,114 @@
+.default-page-header {
+    height: 12em;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(medium-screen-min) {
+        height: 25em;
+    }
+
+    &:before {
+        background: #3c3c3c;
+        border-top: 1em solid white;
+        content: "";
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 0;
+        opacity: .9;
+
+        @include breakpoint(medium-screen-min) {
+            background: linear-gradient(to right, #3c3c3c 64%, #720101 60%, transparent 100%);
+
+        }
+    }
+
+    &:after {
+        @include breakpoint(medium-screen-min) {
+            background: white;
+            content: "";
+            height: 100%;
+            position: absolute;
+            left: 63%;
+            top: 0;
+            width: 1em;
+            z-index: 0;
+        }
+    }
+
+    &__heading {
+        position: relative;
+    }
+
+    &__container {
+        display: flex;
+        height: 100%;
+        max-width: none;
+    }
+
+    &__left {
+        height: 100%;
+        margin: 0 auto;
+        margin-left: 0;
+        // width: 70%;
+
+        &--top {
+            // background-color: $audubonRed;
+            color: $white;
+            display: flex;
+            align-items: center;
+            height: 100%;
+            margin: 0 auto;
+            margin: 0;
+            // max-width: 44rem;
+            padding: 0em 1em;
+            width: 100%;
+            // position: relative;
+        }
+
+        &--bottom {
+            margin: 0 auto;
+            max-width: 44rem;
+            padding: 3em 0em 3em 0;
+        }
+    }
+
+    hr {
+        border-bottom: .75em solid $audubonRed;
+        border-top: none;
+        display: none;
+        width: 100%;
+    }
+
+    &__right {
+        height: 100%;
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        z-index: -1;
+
+    }
+
+    &__image {
+        border: 0;
+        border-left: .75em solid #fff;
+        box-shadow: 0 0 grey;
+        height: 100%;
+        width: auto;
+
+        img {
+            height: 100%;
+            max-width: none;
+            width: 100%;
+            vertical-align: bottom;
+        }
+    }
+
+    a:after {
+        background-color: $audubonRed;
+    }
+}

@@ -1,0 +1,74 @@
+@mixin breakpoint($point) {
+  @if $point == mobile-max {
+    @media (max-width: 37.5em)  { @content ; }
+  }
+  @else if $point == mobile-min {
+    @media (min-width: 37.51em)  { @content ; }
+  }
+  @else if $point == small-screen-max {
+    @media (max-width: 50em) { @content ; }
+  }
+  @else if $point == small-screen-min {
+    @media (min-width: 50.01em) { @content ; }
+  }
+  @else if $point == medium-screen-max {
+    @media (max-width: 60) { @content ; }
+  }
+  @else if $point == medium-screen-min {
+    @media (min-width: 60.01em) { @content ; }
+  }
+  @if $point == large-screen-max {
+    @media (max-width: 70em) { @content ; }
+  }
+  @if $point == large-screen-min {
+    @media (min-width: 70.01em) { @content ; }
+  }
+}
+
+.mobile-max {
+    @include breakpoint(mobile-min) {
+      display: none !important;
+    }
+}
+
+.mobile-min {
+  @include breakpoint(mobile-max) {
+    display: none !important;
+  }
+}
+
+.small-screen-max {
+  @include breakpoint(small-screen-min) {
+    display: none !important;
+  }
+}
+
+.small-screen-min {
+  @include breakpoint(small-screen-max) {
+    display: none !important;
+  }
+}
+
+.medium-screen-max {
+  @include breakpoint(medium-screen-min) {
+    display: none !important;
+  }
+}
+
+.medium-screen-min {
+  @include breakpoint(medium-screen-max) {
+    display: none !important;
+  }
+}
+
+.large-screen-max {
+  @include breakpoint(large-screen-min) {
+    display: none !important;
+  }
+}
+
+.large-screen-min {
+  @include breakpoint(large-screen-max) {
+    display: none !important;
+  }
+}

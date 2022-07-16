@@ -1,0 +1,43 @@
+.hamburger-icon {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 1em;
+    z-index: 2000;
+    @include breakpoint(medium-screen-min) {
+        display: none;
+    }
+    &:hover {
+        span.hamburg er-bar {
+            background: darken($white, 15%);
+            transition: all .5s;
+        }
+    }
+
+    span.hamburger-bar {
+        background: $white;
+        display: block;
+        height: 4px;
+        width: 2em;
+        margin: .5em auto;
+        transition: all .5s;
+
+        &.open {
+            transform: rotate(90deg);
+            transition: all .5s;
+            &:first-of-type {
+                width: 1.5em;
+            }
+        }
+        &.crossbar {
+            transform: rotate(0deg);
+            transition: all .5s;
+            transform: translate(0%,0%);
+        }
+        &.crossbar.open {
+            transition: all .5s;
+            transform: translate(0%,-60%);
+        }
+    }
+}

@@ -1,0 +1,48 @@
+.half-and-half-layout {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    .inner-container {
+        display: flex;
+            flex-direction: column;
+            @include breakpoint(mobile-min) {
+                flex-direction: row;
+            }
+        .column {
+            display: inline-block;
+            margin-bottom: .5em;
+            @include breakpoint(mobile-min) {
+                margin-bottom: 0em;
+                margin-right: .5em;
+                width: 50%;
+            }
+            &:last-of-type {
+                margin-bottom: 0em;
+                margin-right: 0em;
+            }
+
+            img {
+                max-height: 20em;
+                width: 98%;
+            }
+
+            div.bg-image {
+                background-position: center center !important;
+                background-repeat: no-repeat !important;
+                background-size: cover !important;
+                max-height: 20em;
+                width: 100% !important;
+            }
+
+            p {
+                // Removes default margin
+                margin: 0;
+            }
+        }
+    }
+    &.limit-height {
+        max-height: 20em;
+    }
+}

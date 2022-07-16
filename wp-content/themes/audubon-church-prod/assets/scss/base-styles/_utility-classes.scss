@@ -1,0 +1,10 @@
+.darken-background:after {
+    background: rgba(0, 0, 0, 0.6);
+    content: "";
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+}

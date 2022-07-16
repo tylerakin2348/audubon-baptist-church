@@ -1,0 +1,23 @@
+.blog-single-next-prev-links {
+    margin: 0 auto;
+    padding: 2em 1em;
+    text-align: center;
+
+    .blog-single-next-prev-links__link {
+        background-color: $audubonRed;
+        border: .1em solid $audubonRed;
+        border-radius: .35em;
+        color: $white;
+        padding: .5em .8em;
+
+        &:after {
+            display: none;
+        }
+
+        &:focus,
+        &:hover {
+            background-color: transparent;
+            color: $audubonRed;
+        }
+    }
+}

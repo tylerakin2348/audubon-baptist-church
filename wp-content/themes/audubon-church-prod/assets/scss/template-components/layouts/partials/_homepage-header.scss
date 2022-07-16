@@ -1,0 +1,33 @@
+.header-content {
+    background-position: center center;
+    background-size: cover;
+        height: 87vh;
+    position: relative;
+
+    &:before {
+        content: url('../icons/audubon-logo.svg');
+        height: auto;
+        max-width: 40em;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        z-index: 1;
+        @include breakpoint(mobile-min) {
+            width: 68vw;
+        }
+    }
+    &:after {
+        background: $blackOverlay;
+        bottom: 0%;
+        content: '';
+        height: 100%;
+        width: 100%;
+        opacity: .4;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+    }
+}

@@ -1,0 +1,9 @@
+/******************************
+* style.scss imports each of the style sheets
+*****************************/
+
+// Foundational styles
+@import "base-styles/base-styles";
+
+// Sub folder stylesheets
+@import "template-components/template-components";

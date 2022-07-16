@@ -1,0 +1,56 @@
+.blog-posts {
+    display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    margin: 0 auto;
+    max-width: $primaryWidth;
+    padding: 1rem;
+        flex-wrap: wrap;
+    
+    &__post {
+        box-shadow: 0 0 13px 1px #80808063;
+        display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: flex-start;
+        margin: .5rem;
+        width: 90%;
+        
+        @include breakpoint(medium-screen-min) {
+            width: 46%;
+        }
+
+        .image {
+            height: 15rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        img {
+            margin-bottom: 1rem;
+        }
+        
+        .text {
+            padding: 1em;
+            padding-bottom: 3em;
+        }
+        h2 a {
+            color: $black;
+            padding-bottom: 0;
+            font-weight: 400;
+            &:after {
+                display: none;
+            }
+        }
+        a {
+            display: inline-block;
+            margin-left: 0;
+            text-align: left;
+            width: auto;
+            text-decoration: none;
+            &:after {
+                background: $audubonRed;
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+# Compiled source #
+###################
+*node_modules*
+*.jpg
+*.png
+*.scssc
+*.txt
+*.htaccess
+*.map
+*.wp-includes
+*.wp-admin
+*.sass-cache
+package-lock.json
+.vscode/
