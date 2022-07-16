@@ -16,11 +16,9 @@
                     <img src="<?php echo $imageSrc; ?>" alt="">
                 <?php } ?>
 
-                <?php if ($slideRow['partial_slide'] == true) { ?>
-                    <script>console.log('if')</script>
+                <?php if ($slideRow['use_partial_slide'] == true) { ?>
                     <?php include(get_template_directory() . '/template-components/layouts/partials/homepage-slider/' . $slideRow['partial_slide'] . '.php');
                 } else { ?>
-                    <script>console.log('else')</script>
                     <div class="layout-slider__content contain">
                         <?php echo wpautop($slideRow['homepage_slide_content']); ?>
                     </div>
